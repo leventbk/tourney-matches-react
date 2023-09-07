@@ -9,7 +9,6 @@ function App() {
       <h1>Tourney Matches <span>Where Coding and Tournaments Found their Match!</span></h1>
       <PlayerList />
       <MatchList />
-
     </div>
   );
 }

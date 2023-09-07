@@ -6,15 +6,15 @@ import playerData from "../data/playerData";
 import {preparePlayerData, addWinsToPlayer} from "../helpers/playerHelpers"
 
 //PlayerList will need to create an array of Player data/components and output it.
-function PlayerList() {
+function PlayerList(props) {
   const playerDataArray = preparePlayerData(playerData);
-  console.log(playerDataArray);
+  // console.log(playerDataArray);
   const parsedPlayerData = addWinsToPlayer(playerDataArray, matchData); //this is the data we want to use to create the Player components
-  console.log(parsedPlayerData);
+const onePlayer = parsedPlayerData[2];
   return (
     <section className="PlayerList">
       <h1>Current participating players</h1>
-      <Player />
+      <Player gamerTag={onePlayer.gamerTag} firstName={onePlayer.firstName} lastName={onePlayer.lastName} wins={onePlayer.wins}/>
     </section>
   );
 }
