@@ -10,7 +10,7 @@ function PlayerList(props) {
   const playerDataArray = preparePlayerData(playerData);
   // console.log(playerDataArray);
   const parsedPlayerData = addWinsToPlayer(playerDataArray, matchData); //this is the data we want to use to create the Player components
-const onePlayer = parsedPlayerData[2];
+const onePlayer = parsedPlayerData[0];
   return (
     <section className="PlayerList">
       <h1>Current participating players</h1>
